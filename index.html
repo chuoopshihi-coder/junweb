@@ -11,18 +11,13 @@
 
 </head>
 
-<body id="page-top"> <!-- ▼▼▼【確認】請在 body 標籤加上這個 id ▼▼▼ -->
-
-    <!-- ============================================= -->
-    <!-- ===== 浮動選單 (Header) ===== -->
-    <!-- ============================================= -->
+<body id="page-top">
+    <!-- -選單- -->
     <header class="main-header">
         <nav class="main-nav">
             <div class="logo-area">
-                <!-- 在此放置您的 LOGO 圖片 -->
-                <img src="./images/LOGO.png" alt="您的 LOGO">
+                <img src="./images/LOGO.png" alt="LOGO">
             </div>
-
             <ul class="menu-options">
                 <li><a href="#section-1">首頁</a></li>
                 <li><a href="#section-2">新聞</a></li>
@@ -30,44 +25,24 @@
                 <li><a href="#section-carousel">角色</a></li>
                 <li><a href="#section-5">創作</a></li>
             </ul>
-
-            <!-- ▼▼▼ 3.【新增】右側登入按鈕區 ▼▼▼ -->
             <div class="login-area">
                 <a href="#" class="login-button">登入</a>
             </div>
-            <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
         </nav>
     </header>
-
-
-    <!-- ============================================= -->
-    <!-- ===== 主要內容區 (Main Content) ===== -->
-    <!-- ============================================= -->
     <main class="page-content">
-
-        <!-- ▼▼▼ 按鈕一 對應 ▼▼▼ -->
-        <!-- 區塊 1: 第一個圖片區 (1280x1024px) -->
+        <!-- -第一部分- -->
         <section id="section-1" class="content-section hero-section">
             <img src="./images/A1.jpg" alt="">
             <div class="hero-download-button">
                 立即下載
             </div>
         </section>
-
-        <!-- ▼▼▼ 區塊二：最新消息選單 (最終完整版) ▼▼▼ -->
+        <!-- -第二部分- -->
         <section id="section-2" class="content-section news-section">
             <img src="./images/A2.jpg" alt="">
-
-            <!-- 這個容器會將選單定位在背景圖的指定位置 -->
             <div class="news-container">
-
-                <!-- 頁籤選單 -->
                 <ul class="news-tabs">
-                    <!-- 
-              【關鍵修改】
-              已將原本的 <a href="#"> 換成 <div>。
-              這樣它就只是一個視覺上的按鈕，點擊後不會有任何反應。
-            -->
                     <li class="active">
                         <div>最新</div>
                     </li>
@@ -81,19 +56,14 @@
                         <div>更新</div>
                     </li>
                 </ul>
-
             </div>
 
         </section>
-        <!-- ▲▲▲ 區塊二結束 ▲▲▲ -->
-        <!-- ▼▼▼ 按鈕三 對應 ▼▼▼ -->
-        <!-- 區塊 3: 第三個圖片區 (1280x1024px) -->
+        <!-- -第三部分- -->
         <section id="section-3" class="content-section">
             <img src="./images/A3.jpg" alt="圖片說明三">
         </section>
-
-        <!-- ▼▼▼ 按鈕四 對應 ▼▼▼ -->
-        <!-- 區塊 4: 圖片輪播區 (1280x1024px) -->
+        <!-- -第四部份- -->
         <section id="section-carousel" class="content-section">
             <div class="carousel-container">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -144,22 +114,12 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
-
             </div>
         </section>
-
-        <!-- ▼▼▼ 區塊五：垂直三等份區 (最終互動版) ▼▼▼ -->
+        <!-- -第五部分- -->
         <section id="section-5" class="content-section">
-
             <div class="three-row-container">
-
-                <!-- 第一列 -->
                 <div class="row-item" id="row-item-1">
-                    <!-- 
-              【關鍵修改】
-              已將原本的 <a href="#"> 換成 <div>。
-              這樣它就只是一個可以互動的區塊，點擊後不會跳轉或回到頂端。
-            -->
                     <img src="./images/A5_1.png" alt="">
                     <div class="icon-button">
                         <li>
@@ -167,8 +127,6 @@
                         </li>
                     </div>
                 </div>
-
-                <!-- 第二列 -->
                 <div class="row-item" id="row-item-2">
                     <img src="./images/A5_2.png" alt="">
                     <div class="icon-button">
@@ -177,8 +135,6 @@
                         </li>
                     </div>
                 </div>
-
-                <!-- 第三列 -->
                 <div class="row-item" id="row-item-3">
                     <img src="./images/A5_3.png" alt="">
                     <div class="icon-button">
@@ -187,48 +143,29 @@
                         </li>
                     </div>
                 </div>
-
             </div>
         </section>
-        <!-- ▲▲▲ 區塊五結束 ▲▲▲ -->
-        <!-- ▼▼▼ 最終區塊：聲明頁 (多點獨立定位版) ▼▼▼ -->
         <section id="section-6" class="content-section final-section declaration-section">
             <img src="./images/A6.jpg" alt="">
-
-            <!-- 
-      【說明】
-      我們不再需要 .icon-bar-container，因為每個圖示的位置都是獨立的。
-      每個圖示都有一個共用的 class="icon-wrapper" 和一個獨立的 id="icon-pos-N"。
-    -->
-
-            <!-- 圖示一 (左上) -->
             <div class="icon-wrapper" id="icon-pos-1">
                 <img src="./images/ICON_FB.png" alt="圖示一">
             </div>
-
-            <!-- 圖示二 (右上) -->
             <div class="icon-wrapper" id="icon-pos-2">
                 <img src="./images/ICON_IG.png" alt="圖示二">
             </div>
-
-            <!-- 圖示三 (中左) -->
             <div class="icon-wrapper" id="icon-pos-3">
                 <img src="./images/ICON_X.png" alt="圖示三">
             </div>
-
-            <!-- 圖示四 (中右) -->
             <div class="icon-wrapper" id="icon-pos-4">
                 <img src="./images/ICON_YT.png" alt="圖示四">
             </div>
         </section>
-        <!-- ▲▲▲ 最終區塊結束 ▲▲▲ -->
+        
         <script src="./js/jquery-3.2.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
             integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
             crossorigin="anonymous"></script>
 
         <a href="#page-top" class="scroll-to-top-button">↑</a>
-
 </body>
-
 </html>
