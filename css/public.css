@@ -1,4 +1,3 @@
-/* ===== 基本設定與平滑滾動 ===== */
 html {
     scroll-behavior: smooth;
 }
@@ -10,8 +9,7 @@ body {
     display: flex;
     justify-content: center;
 }
-
-/* ========== 浮動選單的樣式 ========== */
+/* --選單-- */
 .main-header {
     position: fixed;
     top: 0;
@@ -32,7 +30,6 @@ body {
     align-items: center;
 }
 
-/* LOGO 區域 */
 .logo-area {
     width: 250px;
 }
@@ -50,7 +47,6 @@ body {
     gap: 45px;
 }
 
-/* 選單文字 */
 .menu-options a {
     text-decoration: none;
     color: white;
@@ -65,7 +61,6 @@ body {
     color: #cccccc;
 }
 
-/* 登入按鈕區域 */
 .login-area {
     width: 250px;
     display: flex;
@@ -89,14 +84,10 @@ body {
     color: #111;
 }
 
-/* ===== 主要內容容器 ===== */
 .page-content {
     width: 1280px;
-    /* ▼▼▼【修正 1】增加上邊距，避免內容被浮動選單遮擋 ▼▼▼ */
     margin-top: 100px;
 }
-
-/* ===== 所有內容區塊的通用樣式 ===== */
 .content-section {
     width: 1280px;
     height: 1024px;
@@ -113,7 +104,6 @@ body {
     object-fit: cover;
 }
 
-/* 區塊 1: 主視覺圖 */
 .hero-section {
     background-image: url('../image/1.jpg');
     background-size: cover;
@@ -122,61 +112,31 @@ body {
 }
 
 .hero-download-button {
-    /* --- 定位 --- */
     position: absolute;
-    /* 關鍵：讓按鈕「浮動」起來 */
     bottom: 20%;
-    /* 離父層 (hero-section) 底部 20% 的位置 */
     left: 45%;
-    /* 讓按鈕的「左邊」對齊畫面中線 */
-
-    /* --- 外觀 (參考您的圖片) --- */
     background-color: #f3b65a;
-    /* 醒目的黃色背景 */
     color: #2e2600;
-    /* 深色文字以確保對比度 */
     padding: 15px 40px;
-    /* 按鈕的內邊距，讓它看起來更飽滿 */
     border-radius: 15px;
-    /* 讓按鈕的兩端變成圓弧形 */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    /* 加個陰影更有立體感 */
-
-    /* --- 文字樣式 --- */
     font-size: 20px;
     font-weight: bold;
     white-space: nowrap;
-    /* 確保文字「立即下載」不會換行 */
-
-    /* --- 互動效果 --- */
     cursor: pointer;
-    /* 滑鼠移上去時，指標變成「小手」形狀 */
-    /* 關鍵：為放大動畫增加平滑過渡效果 */
     transition: transform 0.2s ease-in-out;
 }
-
-/*
- * 3. 新增滑鼠懸停時的放大動畫
-*/
 .hero-download-button:hover {
-    /* 關鍵：將按鈕放大 5% */
     transform: scale(1.05);
 }
-
-/* 輪播區容器 */
 .carousel-container {
     width: 100%;
     height: 100%;
-    /* ▼▼▼【修正 2】移除 display:flex 和置中屬性，讓內容可以填滿 ▼▼▼ */
     padding: 0;
 }
-
-/* 區塊 6: 最後的圖片區 */
 .final-section {
     height: 512px;
 }
-
-/* ========== 回到頂部按鈕的樣式 ========== */
 .scroll-to-top-button {
     position: fixed;
     bottom: 30px;
@@ -194,152 +154,75 @@ body {
     text-decoration: none;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
-    /* ▼▼▼【修正 3】移除 opacity 和 visibility，讓按鈕總是可見 ▼▼▼ */
 }
-
-/* 滑鼠懸停時的效果 */
 .scroll-to-top-button:hover {
     background-color: #333;
     transform: translateY(-5px);
 }
-
-/* ========== 區塊五：垂直三等份 + 浮動 ICON (最終互動版) ========== */
-
 #section-5 {
     padding: 0;
 }
-
 .three-row-container {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 100%;
 }
-
 .row-item {
     flex: 1;
     width: 100%;
     position: relative;
-    /* 關鍵：這是 ICON 按鈕浮動的「定位參考點」*/
     background-size: cover;
     background-position: center;
     overflow: hidden;
 }
-
-/*
- * ▼▼▼【請修改】在這裡為您的三列分別設定「背景圖片」▼▼▼
-*/
-/* #row-item-1 { background-image: url('您的第一張背景圖.jpg'); }
-#row-item-2 { background-image: url('您的第二張背景圖.jpg'); border-top: 1px solid #444; border-bottom: 1px solid #444; }
-#row-item-3 { background-image: url('您的第三張背景圖.jpg'); } */
-
-
-/* ICON 按鈕本身的樣式 */
 .icon-button {
-    /* --- 定位 (保持不變) --- */
     position: absolute;
     bottom: 25px;
     right: 25px;
     z-index: 10;
-
-    /* --- 外觀 (根據您的新要求) --- */
     width: 100px;
-    /* 您之前指定的寬度 */
     height: 33px;
-    /* 您之前指定的高度 */
     box-sizing: border-box;
-    /* 確保邊框寬度包含在尺寸內 */
     background-color: transparent;
-    /* 1. 透明背景 */
     border: 2px solid white;
-    /* 2. 2px 寬的白色長方形邊框 */
     color: white;
-    /* 3. 白色文字 */
     border-radius: 5px;
-    /* 帶一點小圓角，讓外框不那麼尖銳 */
     list-style: none;
-
-    /* --- 文字與置中 --- */
     font-size: 16px;
-    /* 加大一點的文字 */
     font-weight: bold;
     letter-spacing: 1px;
     display: flex;
-    /* 使用 Flexbox 來讓文字完美置中 */
     justify-content: center;
     align-items: center;
     cursor: pointer;
-
-    /* --- 動畫效果 --- */
     transition: all 0.3s ease;
 }
 
 .icon-button:hover {
     background-color: white;
-    /* 滑鼠移上去時，背景變白色 */
     color: black;
-    /* 同時，文字變黑色 */
 }
-
-
-
-/* ========== 區塊二：最新消息選單 (最終完整版) ========== */
-
-/*
- * 1. 整個區塊的背景圖與定位設定
- *    最關鍵的是 position: relative，它為裡面的 .news-container 提供了定位的「畫布」。
-*/
 .news-section {
-    /* 【請修改】將 'image.png' 換成您自己的背景圖檔名 */
     background-size: cover;
     background-position: center;
     position: relative;
-    /* 關鍵！必須保留！ */
     padding: 0;
 }
-
-/*
- * 2. 內容容器 (只包含選單)
- *    我們使用 position: absolute，並透過 top 和 left 來設定它的座標。
-*/
 .news-container {
     position: absolute;
-    /* 關鍵：讓這個區塊「浮動」起來，可以自由定位 */
-
-    /*
-     * ▼▼▼【請在這裡自行調整選單的「垂直」位置】▼▼▼
-     * top 的數值越大，選單就「越往下」。
-    */
     top: 25%;
-
-    /*
-     * ▼▼▼【請在這裡自行調整選單的「水平」位置】▼▼▼
-     * left 的數值越小，選單就「越往左」。
-    */
     left: 2%;
-
-    /* 容器本身的寬度，您可以不用修改 */
     width: 65%;
 }
-
-
-/*
- * 3. 頁籤選單的樣式
-*/
 .news-tabs {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    /* 讓按鈕水平排列 */
     gap: 15px;
-    /* 按鈕之間的間距 */
     padding-top: 150px;
 }
-
-/* 
- * 4. 按鈕本身的樣式 (已將 a 改為 div)
-*/
 .news-tabs div {
     display: block;
     padding: 10px 30px;
@@ -349,71 +232,34 @@ body {
     font-weight: bold;
     border-radius: 50px;
     transition: all 0.3s ease;
-
-    /* 關鍵：加上手形游標，讓它看起來仍然像個按鈕 */
     cursor: pointer;
 }
-
-/* 非啟用按鈕的滑鼠懸停效果 */
 .news-tabs li:not(.active) div:hover {
     background-color: rgba(60, 60, 60, 0.9);
     color: white;
 }
-
-/* 啟用中按鈕的樣式 */
 .news-tabs li.active div {
     background-color: #4a4a4a;
     color: white;
 }
-
-/* ========== 最終區塊：聲明頁 (多點獨立定位版) ========== */
-
-/*
- * 1. 整個區塊的樣式
- *    最關鍵的是 position: relative，它為裡面的 ICON 提供了定位的「畫布」。
-*/
 .declaration-section {
-    background-image: url('A_聲明.jpg'); /* 【請確認】您的背景圖檔名 */
     background-size: cover;
     background-position: center;
-    position: relative; /* 關鍵！必須保留！ */
+    position: relative;
     padding: 0;
 }
 
-
-/*
- * 2. ICON 包裝的「共用」樣式
- *    所有 ICON 都會繼承這些樣式。
-*/
 .icon-wrapper {
-    position: absolute; /* 關鍵：讓所有 ICON 都「浮動」起來，可以自由定位 */
+    position: absolute;
     cursor: pointer;
 }
-
-
-/*
- * 3. ICON 圖片本身的「共用」樣式
-*/
 .icon-wrapper img {
     object-fit: contain;
-    transition: transform 0.2s ease-in-out; /* 放大動畫的平滑過渡 */
+    transition: transform 0.2s ease-in-out;
 }
-
-
-/*
- * 4. 滑鼠懸停的「共用」動畫效果
-*/
 .icon-wrapper:hover img {
     transform: scale(1.15); /* 放大 15% */
 }
-
-
-/*
- * 5. ▼▼▼【請在這裡為每個 ICON 單獨調整位置】▼▼▼
- *    top/bottom 控制上下，left/right 控制左右。
-*/
-
-/* --- 圖示一 (左上) --- */
 #icon-pos-1 {
     top: 14.7%;
     left: 38.5%;
@@ -421,28 +267,23 @@ body {
     height: 100px;
 
 }
-
-/* --- 圖示二 (右上) --- */
 #icon-pos-2 {
     top: 15%;
     right: 39%;
     width: 100px;
     height: 100px;
 }
-
-/* --- 圖示三 (中左) --- */
 #icon-pos-3 {
     top: 16.5%;
     left: 44%;
     width: 100px;
     height: 100px;
 }
-
-/* --- 圖示四 (中右) --- */
 #icon-pos-4 {
     top: 17.4%;
     right: 44%;
     width: 90px;
     height: 90px;
 }
+
 
